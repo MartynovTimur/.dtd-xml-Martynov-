@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE timeTable [
+<!ELEMENT timeTable (complexes, lessons)>
+<!ELEMENT complexes (complex+)>
+<!ELEMENT complex (name, address)>
+<!ATTLIST complex code ID #REQUIRED>
+<!ELEMENT lessons (lesson+)>
+<!ELEMENT lesson (date, time)>
+<!ATTLIST lesson по CDATA #REQUIRED comple IDREF #REQUIRED>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT address (#PCDATA)>
+<!ELEMENT date (#PCDATA)>
+<!ELEMENT time (#PCDATA)>
+]>
+<timeTable>
+  <complexes>
+    <complex code="dp19z1">
+      <name>Парк</name>
+    </complex>
+    <complex code="pd914z">
+      <address>ВДНХ Ц1</address>
+    </complex>
+  </complexes>
+  <lessons>
+    <lesson no="10" complex="dp19z1">
+      <date>25.09.25</date>
+      <time>10:00</time>
+    </lesson>
+    <lesson no="20" complex="pd914z">
+      <date>25.09.2025</date>
+      <time>13:41</time>
+    </lesson>
+  </lessons>
+</timeTable>
